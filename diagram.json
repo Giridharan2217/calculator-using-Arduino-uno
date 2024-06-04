@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 67.8, "left": -163.8, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": 94, "left": 447.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 238.7, "left": 355, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 0, "left": 575.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 0, "left": 431.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 0, "left": 469.8, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -265.37, "left": 409.6, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": 403.2, "left": 373.8, "attrs": {} }
+  ],
+  "connections": [
+    [
+      "uno:0",
+      "keypad1:C4",
+      "green",
+      [ "v-19.2", "h177.1", "v412.8", "h0", "v57.6", "h345.6", "v-9.6" ]
+    ],
+    [ "uno:1", "keypad1:C3", "green", [ "v-28.8", "h196.2", "v470.4", "h326.4" ] ],
+    [ "uno:2", "keypad1:C2", "green", [ "v-38.4", "h215.3", "v470.4", "h307.2" ] ],
+    [ "keypad1:C1", "uno:3", "green", [ "v67.2", "h-288.1", "v-470.4", "h-230.4" ] ],
+    [ "uno:4", "keypad1:R4", "green", [ "v-57.6", "h253.5", "v470.4", "h268.8" ] ],
+    [ "keypad1:R3", "uno:5", "green", [ "v48", "h-249.9", "v-470.4", "h-278.4" ] ],
+    [ "uno:6", "keypad1:R2", "green", [ "v-76.8", "h291.7", "v470.4", "h230.4" ] ],
+    [ "keypad1:R1", "uno:7", "green", [ "v28.8", "h-211.2", "v-470.4", "h-307.2" ] ],
+    [ "uno:8", "lcd1:D7", "green", [ "v-115.2", "h566.8" ] ],
+    [ "lcd1:D6", "uno:9", "green", [ "v86.4", "h-556.6" ] ],
+    [ "uno:10", "lcd1:D5", "green", [ "v-134.4", "h557.5" ] ],
+    [ "lcd1:D4", "uno:11", "green", [ "v67.2", "h-556.8", "v9.6" ] ],
+    [ "uno:12", "lcd1:E", "green", [ "v-153.6", "h518.9" ] ],
+    [ "uno:13", "lcd1:RS", "green", [ "v-163.2", "h10" ] ],
+    [ "lcd1:RW", "gnd3:GND", "green", [ "v0" ] ],
+    [ "lcd1:VSS", "gnd2:GND", "green", [ "v0" ] ],
+    [ "lcd1:K", "gnd1:GND", "green", [ "v96", "h67.2" ] ],
+    [ "uno:5V", "lcd1:A", "red", [ "v57.5", "h-188.2", "v-412.8", "h768" ] ],
+    [ "uno:5V", "lcd1:VDD", "red", [ "v57.5", "h-188.2", "v-412.8", "h643.2" ] ],
+    [ "pot1:GND", "gnd4:GND", "black", [ "v0" ] ],
+    [ "lcd1:V0", "pot1:SIG", "green", [ "v201.6", "h-115.5", "v268.8", "h48", "v9.6" ] ],
+    [ "uno:5V", "pot1:VCC", "red", [ "v105.5", "h407" ] ]
+  ],
+  "dependencies": {}
+}
